@@ -7,7 +7,10 @@ function PostFeed({ refresh }) {
   useEffect(() => {
     fetch("http://127.0.0.1:5000/posts")
       .then((res) => res.json())
-      .then((data) => setPosts(data))
+      .then((data) => {
+        const sortedPosts = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setPosts(sortedPosts)
+      })
       .catch((err) => console.error("Failed to fetch posts:", err));
   }, [refresh]); // <-- Rerun when refresh changes
 
