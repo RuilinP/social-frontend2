@@ -74,6 +74,7 @@ function PostComposer({ user, onPostCreated }) {
           <Button type="submit" variant="primary" className="mt-2">
             Post
           </Button>
+          
         </Form>
       </Card.Body>
     </Card>

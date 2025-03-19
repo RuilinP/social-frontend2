@@ -9,7 +9,13 @@ function UserInfo({ user }) {
           <Card.Title>Not Logged In</Card.Title>
           <Card.Text>Please log in to see your profile details.</Card.Text>
         </Card.Body>
+
+        <Card.Body>
+          <Card.Title>Logged In</Card.Title>
+          <Card.Text>You are currently logged in</Card.Text>
+        </Card.Body>
       </Card>
+      
     );
   }
 
@@ -24,6 +30,8 @@ function UserInfo({ user }) {
       <Card.Body>
         <Card.Title>{user.name}</Card.Title>
         <Card.Text>{user.email}</Card.Text>
+        <Card.Text>{user.phone}</Card.Text>
+        <Card.Text>{user.address}</Card.Text>
       </Card.Body>
     </Card>
   );

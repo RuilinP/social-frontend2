@@ -29,7 +29,14 @@ function AppNavbar({ user, handleLogout }) {
               >
                 Login with Google
               </Button>
-            )}
+            ) } (
+              <Button
+                variant="light"
+                onClick={() => (window.location.href = "http://localhost:5000/auth/google")}
+              >
+                Logout with Google
+              </Button>
+            )
           </Nav>
         </Navbar.Collapse>
       </Container>
